@@ -1,1 +1,1412 @@
-{"id":"/index.html","path":"/index.html","sha":"033dfc785452ef12ecb3e6046a599ed34c2e65a6","mime_type":"text/html","size":40338,"site_id":"b06f603c-0a19-4782-925f-69d712892cdf","deploy_id":"69c975a808ca7dc28617a4ab"}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCV ABC | Santa Clarita Valley AI Boot Camp | Learn AI for Your Business</title>
+<meta name="description" content="Santa Clarita Valley's only AI Boot Camp for local business owners. Learn to deploy AI tools that save time, cut costs, and grow revenue. Led by a 27+ year local business veteran who's trained 1,000+ professionals in AI.">
+<meta name="keywords" content="Santa Clarita AI training, SCV AI boot camp, AI for small business, Santa Clarita Valley business, AI automation, voice AI, local business AI, SCV business training">
+<meta name="author" content="Connor MacIvor">
+<meta property="og:title" content="SCV ABC | Santa Clarita Valley AI Boot Camp">
+<meta property="og:description" content="AI isn't coming. It's here. Local business owners in Santa Clarita are learning to use it. Are you?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scvabc.com">
+<!-- OG IMAGE: Replace with Connor's AI cyborg image -->
+<!-- <meta property="og:image" content="https://scvabc.com/og-image.png"> -->
+<link rel="canonical" href="https://scvabc.com">
+<!-- FAVICON: Replace with CWH SVG favicon -->
+<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg"> -->
+
+<!-- META PIXEL: Replace with your pixel ID -->
+<!--
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Georgia&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cyan: #00e5ff;
+    --cyan-dim: #00e5ff88;
+    --red: #ff1744;
+    --red-dim: #ff174466;
+    --gold: #ffd740;
+    --gold-dim: #ffd74066;
+    --dark-bg: #0a0a0f;
+    --dark-card: #0d0d14;
+    --dark-surface: #12121c;
+    --grid-color: #00e5ff08;
+    --grid-line: #00e5ff12;
+    --text-primary: #e8e8ec;
+    --text-secondary: #8a8a9a;
+    --text-muted: #55556a;
+    --font-display: 'Orbitron', monospace;
+    --font-body: 'Rajdhani', sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark-bg);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* TRON GRID BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--cyan-dim) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 100%, var(--red-dim) 0%, transparent 50%);
+    opacity: 0.07;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  section, header, footer, nav { position: relative; z-index: 1; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(10,10,15,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--cyan-dim);
+    padding: 14px 0;
+    transition: all 0.3s ease;
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-brand {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-decoration: none;
+  }
+
+  .nav-brand .scv { color: var(--cyan); }
+  .nav-brand .abc { color: var(--gold); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    padding: 10px 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .nav-cta:hover {
+    background: var(--cyan);
+    color: var(--dark-bg);
+    box-shadow: 0 0 30px var(--cyan-dim);
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    position: relative;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-tag {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+  }
+
+  .hero h1 .highlight-cyan { color: var(--cyan); }
+  .hero h1 .highlight-gold { color: var(--gold); }
+
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 640px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--cyan);
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--cyan);
+    color: var(--dark-bg);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 40px var(--cyan-dim), 0 0 80px rgba(0,229,255,0.15);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    text-decoration: none;
+    border: 1px solid var(--text-muted);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* PROBLEM SECTION */
+  .problem {
+    padding: 100px 0;
+    border-top: 1px solid var(--grid-line);
+  }
+
+  .section-tag {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-tag::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--red);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .section-body {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .pain-card {
+    background: var(--dark-card);
+    border: 1px solid var(--grid-line);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .pain-card:hover {
+    border-color: var(--red-dim);
+    transform: translateY(-2px);
+  }
+
+  .pain-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--red);
+  }
+
+  .pain-card h3 {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 12px;
+  }
+
+  .pain-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* WHAT YOU LEARN */
+  .curriculum {
+    padding: 100px 0;
+    border-top: 1px solid var(--grid-line);
+  }
+
+  .module-list {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .module-item {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background: var(--dark-card);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .module-item:hover {
+    border-color: var(--cyan-dim);
+    background: var(--dark-surface);
+  }
+
+  .module-number {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--cyan-dim);
+  }
+
+  .module-info h3 {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .module-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 300;
+  }
+
+  .module-duration {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+  }
+
+  /* WHO THIS IS FOR */
+  .audience {
+    padding: 100px 0;
+    border-top: 1px solid var(--grid-line);
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .audience-item {
+    background: var(--dark-card);
+    border: 1px solid var(--grid-line);
+    padding: 28px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .audience-item:hover {
+    border-color: var(--gold-dim);
+    transform: translateY(-2px);
+  }
+
+  .audience-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .audience-item h3 {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* CREDIBILITY */
+  .credibility {
+    padding: 100px 0;
+    border-top: 1px solid var(--grid-line);
+  }
+
+  .cred-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 40px;
+    align-items: start;
+  }
+
+  .cred-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  .cred-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .cred-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cred-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--dark-card);
+    border-left: 2px solid var(--cyan);
+  }
+
+  .cred-item .cred-stat {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cyan);
+    white-space: nowrap;
+  }
+
+  .cred-item .cred-detail {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+  }
+
+  /* PRICING */
+  .pricing {
+    padding: 100px 0;
+    border-top: 1px solid var(--grid-line);
+  }
+
+  .price-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .price-card {
+    background: var(--dark-card);
+    border: 1px solid var(--grid-line);
+    padding: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .price-card.featured {
+    border-color: var(--cyan);
+    box-shadow: 0 0 40px rgba(0,229,255,0.05);
+  }
+
+  .price-card.featured::after {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--cyan);
+    color: var(--dark-bg);
+    font-family: var(--font-display);
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    padding: 4px 16px;
+    font-weight: 700;
+  }
+
+  .price-tag {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  .price-amount {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+
+  .price-card.featured .price-amount { color: var(--cyan); }
+
+  .price-period {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .price-features {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  .price-features li {
+    padding: 8px 0;
+    color: var(--text-secondary);
+    font-weight: 300;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .price-features li::before {
+    content: '>';
+    font-family: var(--font-display);
+    color: var(--cyan);
+    font-size: 0.7rem;
+  }
+
+  .price-card .btn-primary { width: 100%; text-align: center; }
+  .price-card .btn-secondary { width: 100%; text-align: center; }
+
+  /* CTA / FORM */
+  .cta-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--grid-line);
+    text-align: center;
+  }
+
+  .cta-section .section-tag {
+    justify-content: center;
+    color: var(--cyan);
+  }
+
+  .cta-section .section-tag::before { background: var(--cyan); }
+
+  .cta-section .section-title {
+    margin: 0 auto 16px;
+  }
+
+  .cta-section .section-body {
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+
+  /* GHL FORM PLACEHOLDER */
+  .form-embed {
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--dark-card);
+    border: 1px solid var(--cyan-dim);
+    padding: 40px;
+    text-align: left;
+  }
+
+  .form-embed h3 {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: var(--dark-bg);
+    border: 1px solid var(--grid-line);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 12px 16px;
+    transition: border-color 0.3s ease;
+    outline: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--cyan);
+  }
+
+  .form-group select {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .form-group select option {
+    background: var(--dark-bg);
+    color: var(--text-primary);
+  }
+
+  .form-submit {
+    width: 100%;
+    background: var(--cyan);
+    color: var(--dark-bg);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+  }
+
+  .form-submit:hover {
+    box-shadow: 0 0 40px var(--cyan-dim);
+  }
+
+  .form-note {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* SUBTLE RE BANNER */
+  .re-subtle {
+    padding: 48px 0;
+    border-top: 1px solid var(--grid-line);
+    text-align: center;
+  }
+
+  .re-subtle p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  .re-subtle a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .re-subtle a:hover { color: var(--gold); text-decoration: underline; }
+
+  /* FOOTER */
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--grid-line);
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+  }
+
+  .footer-brand .scv { color: var(--cyan); }
+  .footer-brand .abc { color: var(--gold); }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover { color: var(--cyan); }
+
+  .footer-copy {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .footer-copy a {
+    color: var(--cyan-dim);
+    text-decoration: none;
+  }
+
+  .footer-copy a:hover { color: var(--cyan); }
+
+  /* FAQ */
+  .faq {
+    padding: 100px 0;
+    border-top: 1px solid var(--grid-line);
+  }
+
+  .faq-list {
+    max-width: 700px;
+    margin-top: 48px;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--grid-line);
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+
+  .faq-question:hover { color: var(--cyan); }
+
+  .faq-toggle {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--cyan);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .faq-answer.open {
+    max-height: 300px;
+    padding-bottom: 20px;
+  }
+
+  .faq-answer p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ANIMATIONS */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-stats { gap: 24px; }
+    .cred-content { grid-template-columns: 1fr; gap: 32px; }
+    .module-item { grid-template-columns: 40px 1fr; }
+    .module-duration { display: none; }
+    .price-cards { grid-template-columns: 1fr; }
+    .hero-cta-row { flex-direction: column; }
+    .btn-primary, .btn-secondary { text-align: center; }
+    .form-embed { padding: 28px 20px; }
+  }
+
+  /* SERIF FOR MACIVOR */
+  .serif { font-family: var(--font-serif); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <a href="#" class="nav-brand"><span class="scv">SCV</span><span class="abc">abc</span></a>
+    <a href="#enroll" class="nav-cta">Reserve Your Seat</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">Santa Clarita Valley</div>
+      <h1>
+        Your Competitors Are<br>
+        <span class="highlight-cyan">Already Using AI.</span><br>
+        You're Still Googling<br>
+        <span class="highlight-gold">"What Is AI?"</span>
+      </h1>
+      <p class="hero-sub">
+        SCV ABC is the only AI Boot Camp built for Santa Clarita Valley business owners. Not theory. Not hype. Real tools you deploy in your business before you leave the room.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">27+</span>
+          <span class="stat-label">Years in Local Business</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">1,000+</span>
+          <span class="stat-label">Professionals Trained</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">2021</span>
+          <span class="stat-label">Deploying AI Since</span>
+        </div>
+      </div>
+      <div class="hero-cta-row">
+        <a href="#enroll" class="btn-primary">Reserve Your Seat</a>
+        <a href="#curriculum" class="btn-secondary">See the Curriculum</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem fade-in">
+  <div class="container">
+    <div class="section-tag">The Problem</div>
+    <h2 class="section-title">AI Is Eating Every Industry.<br>Most Local Businesses Are Still on the Menu.</h2>
+    <p class="section-body">
+      The big companies have entire AI departments. You have a smartphone and a prayer. That gap is about to cost you customers, revenue, and years of catch-up. Unless you close it now.
+    </p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <h3>Wasted Hours</h3>
+        <p>You're answering the same 20 questions manually. Writing the same emails. Posting the same content. AI handles all of it while you sleep.</p>
+      </div>
+      <div class="pain-card">
+        <h3>Lost Leads</h3>
+        <p>A customer calls at 9pm. Nobody answers. They call the next business. AI answers every call, texts back instantly, books appointments 24/7.</p>
+      </div>
+      <div class="pain-card">
+        <h3>Falling Behind</h3>
+        <p>Your competitors are using AI to write content, run ads, automate follow-up, and close faster. Every month you wait, the gap widens.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="curriculum fade-in" id="curriculum">
+  <div class="container">
+    <div class="section-tag" style="color: var(--cyan);">
+      <span style="display:inline-block; width:30px; height:1px; background:var(--cyan);"></span>
+      The Curriculum
+    </div>
+    <h2 class="section-title">Four Modules. Four Weeks. Total Transformation.</h2>
+    <p class="section-body">Each module is 60 minutes of hands-on deployment. You don't just learn about AI. You leave with AI running in your business.</p>
+    <div class="module-list">
+      <div class="module-item">
+        <span class="module-number">01</span>
+        <div class="module-info">
+          <h3>AI Decoded: What It Actually Is</h3>
+          <p>Cut through the noise. Understand what AI can and cannot do for a local business. Set up your first AI tool before the session ends.</p>
+        </div>
+        <span class="module-duration">Week 1</span>
+      </div>
+      <div class="module-item">
+        <span class="module-number">02</span>
+        <div class="module-info">
+          <h3>AI for Operations: Save 10+ Hours a Week</h3>
+          <p>Automate scheduling, customer communication, content creation, and follow-up. Build the workflows that eliminate your busywork.</p>
+        </div>
+        <span class="module-duration">Week 2</span>
+      </div>
+      <div class="module-item">
+        <span class="module-number">03</span>
+        <div class="module-info">
+          <h3>AI Voice + Chat: Your 24/7 Employee</h3>
+          <p>Deploy an AI agent that answers your phone, responds to texts, books appointments, and never calls in sick. Live demo with your business info.</p>
+        </div>
+        <span class="module-duration">Week 3</span>
+      </div>
+      <div class="module-item">
+        <span class="module-number">04</span>
+        <div class="module-info">
+          <h3>AI Marketing: Ads, Content, and Growth on Autopilot</h3>
+          <p>Write ads in minutes. Generate social content for a month in one sitting. Build automated funnels that convert leads while you focus on what you do best.</p>
+        </div>
+        <span class="module-duration">Week 4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="audience fade-in">
+  <div class="container">
+    <div class="section-tag" style="color: var(--gold);">
+      <span style="display:inline-block; width:30px; height:1px; background:var(--gold);"></span>
+      Built for You
+    </div>
+    <h2 class="section-title">If You Own a Business in the SCV, This Is for You.</h2>
+    <p class="section-body">We designed this for owners and operators who are too busy running their business to figure out AI on their own.</p>
+    <div class="audience-grid">
+      <div class="audience-item">
+        <span class="audience-icon">🦷</span>
+        <h3>Dental Offices</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">💈</span>
+        <h3>Salons & Spas</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">⚖️</span>
+        <h3>Attorneys</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">🏠</span>
+        <h3>Real Estate</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">🔧</span>
+        <h3>Contractors</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">🏋️</span>
+        <h3>Fitness & Wellness</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">🍕</span>
+        <h3>Restaurants</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">💰</span>
+        <h3>Financial Services</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">🐾</span>
+        <h3>Veterinarians</h3>
+      </div>
+      <div class="audience-item">
+        <span class="audience-icon">🛍️</span>
+        <h3>Retail & E-Commerce</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY -->
+<section class="credibility fade-in">
+  <div class="container">
+    <div class="section-tag" style="color: var(--cyan);">
+      <span style="display:inline-block; width:30px; height:1px; background:var(--cyan);"></span>
+      Who's Teaching This
+    </div>
+    <h2 class="section-title">Not a Consultant. A Deployer.</h2>
+    <div class="cred-content">
+      <div class="cred-text">
+        <p>
+          Most "AI experts" have never deployed AI in a real business. They've watched YouTube videos and read blog posts. They teach theory.
+        </p>
+        <br>
+        <p>
+          This boot camp is led by someone who has been <strong>building and deploying AI systems in real Santa Clarita businesses since 2021</strong>. Voice agents that answer phones at 2am. Automated marketing systems that generate leads on autopilot. Content engines that produce months of material in hours.
+        </p>
+        <br>
+        <p>
+          A <strong>27+ year local business veteran</strong>. A <strong>self-taught programmer since 1983</strong>. Someone who has <strong>trained over 1,000 professionals</strong> on how to use AI in their operations.
+        </p>
+        <br>
+        <p>
+          Not theory. Not slides. Real deployments. Real results. Right here in the SCV.
+        </p>
+      </div>
+      <div class="cred-list">
+        <div class="cred-item">
+          <span class="cred-stat">1983</span>
+          <span class="cred-detail">Writing code since before most "AI gurus" were born</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-stat">2021</span>
+          <span class="cred-detail">Deploying AI in real businesses since day one</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-stat">1,000+</span>
+          <span class="cred-detail">Professionals trained in AI implementation</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-stat">27+</span>
+          <span class="cred-detail">Years running businesses in Santa Clarita</span>
+        </div>
+        <div class="cred-item">
+          <span class="cred-stat">24/7</span>
+          <span class="cred-detail">AI systems currently running for local businesses</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing fade-in" id="pricing">
+  <div class="container">
+    <div class="section-tag" style="color: var(--gold);">
+      <span style="display:inline-block; width:30px; height:1px; background:var(--gold);"></span>
+      Investment
+    </div>
+    <h2 class="section-title">Two Ways In. Both Change Everything.</h2>
+    <p class="section-body">What would it be worth to stop losing leads at 9pm? To reclaim 10 hours a week? To finally understand what your competitors are doing with AI?</p>
+    <div class="price-cards">
+      <div class="price-card">
+        <div class="price-tag">Self-Paced</div>
+        <div class="price-amount">$497</div>
+        <div class="price-period">One-time. Lifetime access.</div>
+        <ul class="price-features">
+          <li>All 4 modules, on-demand video</li>
+          <li>Step-by-step deployment guides</li>
+          <li>Templates, prompts, and scripts</li>
+          <li>Private SCV ABC community access</li>
+          <li>Quarterly live Q&A session</li>
+        </ul>
+        <a href="#enroll" class="btn-secondary">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tag">Live Cohort</div>
+        <div class="price-amount">$997</div>
+        <div class="price-period">4 weeks. Hands-on. Limited to 20 seats.</div>
+        <ul class="price-features">
+          <li>Everything in Self-Paced, plus:</li>
+          <li>Live weekly sessions with Q&A</li>
+          <li>Personalized AI setup for your business</li>
+          <li>1-on-1 deployment support</li>
+          <li>Priority access to advanced workshops</li>
+        </ul>
+        <a href="#enroll" class="btn-primary">Reserve Your Seat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq fade-in">
+  <div class="container">
+    <div class="section-tag" style="color: var(--text-muted);">
+      <span style="display:inline-block; width:30px; height:1px; background:var(--text-muted);"></span>
+      Questions
+    </div>
+    <h2 class="section-title">Frequently Asked</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need any technical experience?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Zero. If you can use a smartphone, you can deploy AI in your business. We start from scratch and build up. By the end of Module 1, you'll have your first AI tool running.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What kind of results can I expect?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Most participants report saving 10+ hours per week within 30 days. Several have deployed AI voice agents that answer calls 24/7, eliminating missed leads entirely. The ROI on the course typically pays for itself within the first month.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is this just ChatGPT tips and tricks?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>No. ChatGPT is one tool. We cover voice AI, automated marketing, CRM automation, content generation, ad creation, and full business workflow automation. This is deployment, not prompting.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          I'm too busy. How much time does this take?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>One hour per week for four weeks. That's it. And the time you invest now saves you 10x that every single week going forward. The busier you are, the more you need this.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What if AI replaces my employees?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>AI won't replace your people. It replaces the tasks they hate doing. Your team gets to focus on high-value work while AI handles the repetitive grind. Morale goes up. Capacity goes up. Costs go down.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I get a refund?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>If you attend the first session and don't see the value, we'll refund your investment in full. No games. No small print. We're that confident.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / FORM -->
+<section class="cta-section fade-in" id="enroll">
+  <div class="container">
+    <div class="section-tag">Limited Seats</div>
+    <h2 class="section-title">The Next Cohort Is Forming Now.</h2>
+    <p class="section-body">Reserve your seat. We'll reach out with details, schedule, and everything you need to show up ready.</p>
+
+    <!-- 
+      GHL FORM EMBED: Replace this entire form with your HonorElevate form embed code.
+      Create form in SCVabc subaccount with fields:
+      - First Name
+      - Email
+      - Phone
+      - Business Type (dropdown)
+      - Biggest AI Question (textarea)
+      
+      Webhook/Trigger: On submit → tag "scvabc-waitlist" → nurture sequence
+    -->
+    <div class="form-embed" id="scvabc-form">
+      <h3>Reserve Your Seat</h3>
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Your first name" id="fname">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="you@yourbusiness.com" id="email">
+      </div>
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="tel" placeholder="(661) 555-1234" id="phone">
+      </div>
+      <div class="form-group">
+        <label>Business Type</label>
+        <select id="biztype">
+          <option value="">Select your industry</option>
+          <option value="dental">Dental / Medical</option>
+          <option value="legal">Legal / Attorney</option>
+          <option value="realestate">Real Estate / Mortgage</option>
+          <option value="salon">Salon / Spa / Wellness</option>
+          <option value="restaurant">Restaurant / Food Service</option>
+          <option value="contractor">Contractor / Home Services</option>
+          <option value="fitness">Fitness / Personal Training</option>
+          <option value="retail">Retail / E-Commerce</option>
+          <option value="financial">Financial Services / Insurance</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>What's Your Biggest AI Question?</label>
+        <textarea rows="3" placeholder="What would you want AI to do for your business?" id="aiquestion"></textarea>
+      </div>
+      <button class="form-submit" onclick="submitForm()">Reserve My Seat</button>
+      <p class="form-note">We'll never share your info. Expect a personal response within 24 hours.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUBTLE RE CROSSOVER -->
+<section class="re-subtle">
+  <div class="container">
+    <p>SCV ABC is part of the <a href="https://honorelevate.com" target="_blank" rel="noopener">HonorElevate</a> ecosystem. Whether it's AI for your business or <a href="https://connorwithhonor.com" target="_blank" rel="noopener">selling your home for $17,000 flat</a>, we help Santa Clarita Valley business owners keep more of what they earn.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-brand"><span class="scv">SCV</span><span class="abc">abc</span></div>
+    <div class="footer-links">
+      <a href="https://honorelevate.com" target="_blank" rel="noopener">HonorElevate</a>
+      <a href="https://hireaivoice.com" target="_blank" rel="noopener">HireAIVoice</a>
+      <a href="https://connorwithhonor.com" target="_blank" rel="noopener">Connor with Honor</a>
+      <a href="tel:6614001720">661-400-1720</a>
+    </div>
+    <p class="footer-copy">
+      &copy; 2026 SCV ABC | Santa Clarita Valley AI Boot Camp<br>
+      <a href="https://honorelevate.com" target="_blank" rel="noopener">Coded by Connor with Honor | AI Growth Architect</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // FAQ TOGGLE
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const toggle = btn.querySelector('.faq-toggle');
+    const isOpen = answer.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-toggle').forEach(t => t.textContent = '+');
+
+    if (!isOpen) {
+      answer.classList.add('open');
+      toggle.textContent = '−';
+    }
+  }
+
+  // FADE IN ON SCROLL
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // PLACEHOLDER FORM SUBMIT
+  // Replace this with GHL form embed or webhook POST
+  function submitForm() {
+    const fname = document.getElementById('fname').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    if (!fname || !email || !phone) {
+      alert('Please fill in your name, email, and phone number.');
+      return;
+    }
+
+    // TODO: Replace with GHL webhook POST
+    // fetch('YOUR_GHL_WEBHOOK_URL', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     first_name: fname,
+    //     email: email,
+    //     phone: phone,
+    //     business_type: document.getElementById('biztype').value,
+    //     ai_question: document.getElementById('aiquestion').value,
+    //     tags: ['scvabc-waitlist'],
+    //     source: 'scvabc.com'
+    //   })
+    // });
+
+    document.getElementById('scvabc-form').innerHTML = `
+      <div style="text-align:center; padding: 40px 0;">
+        <h3 style="color: var(--cyan); margin-bottom: 16px;">You're In, ${fname}.</h3>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">Check your inbox. We'll send you everything you need within 24 hours.</p>
+      </div>
+    `;
+  }
+
+  // SMOOTH SCROLL FOR ANCHOR LINKS
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+<!-- STRUCTURED DATA / JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "SCV ABC - Santa Clarita Valley AI Boot Camp",
+  "description": "A 4-week AI Boot Camp for Santa Clarita Valley business owners. Learn to deploy AI voice agents, automated marketing, content generation, and business workflow automation.",
+  "provider": {
+    "@type": "Organization",
+    "name": "HonorElevate",
+    "url": "https://honorelevate.com"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Santa Clarita Valley, California"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Self-Paced",
+      "price": "497",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Live Cohort",
+      "price": "997",
+      "priceCurrency": "USD"
+    }
+  ],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "Online",
+    "duration": "P4W"
+  }
+}
+</script>
+
+</body>
+</html>
